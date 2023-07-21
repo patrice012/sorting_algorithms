@@ -31,7 +31,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *current_node, *next_node;
 
-	if (*list == NULL || (*list)->next == NULL)
+	if (list == NULL || *list == NULL)
 		return;
 
 	current_node = *list;
