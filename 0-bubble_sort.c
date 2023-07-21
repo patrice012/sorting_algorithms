@@ -1,4 +1,6 @@
 #include "sort.h"
+
+
 /**
  * swap - helper fonction used to swap to value
  * @first: first value
@@ -22,8 +24,11 @@ void swap(int *first, int *second)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j = 0;
-	int swapped = 0;
+	size_t i, j;
+	int swapped;
+
+	if (array == NULL)
+		return;
 
 	for (i = 0; i < size - 1; i++)
 	{
