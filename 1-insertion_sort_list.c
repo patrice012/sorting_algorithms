@@ -14,10 +14,10 @@ void swap(listint_t **temp, listint_t **list)
 	(*temp)->next = (*temp)->prev;
 	(*temp)->prev = (*temp)->prev->prev;
 	(*temp)->next->prev = *temp;
-	if ((*temp)->prev == NULL)
-		*list = *temp;
-	else
+	if ((*temp)->prev != NULL)
 		(*temp)->prev->next = *temp;
+	else
+		*list = *temp;
 
 }
 
