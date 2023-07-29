@@ -1,8 +1,13 @@
 #ifndef _DESK_H_
 #define _DESK_H_
 
+
 /**
- * kind_e - enum
+ * enum kind_e - Enumeration of card suits.
+ * @SPADE: Spades suit.
+ * @HEART: Hearts suit.
+ * @CLUB: Clubs suit.
+ * @DIAMOND: Diamonds suit.
  */
 typedef enum kind_e
 {
@@ -39,4 +44,5 @@ typedef struct deck_node_s
 	struct deck_node_s *next;
 } deck_node_t;
 
+void sort_deck(deck_node_t **deck);
 #endif
